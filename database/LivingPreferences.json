@@ -1,0 +1,102 @@
+[
+    {
+        "cleanliness": "tidy",
+        "guest_frequency": "sometimes",
+        "noise_level": "quiet",
+        "preference_id": 1,
+        "roommate_guest_preference": "notice",
+        "sleep_schedule": "early-bird",
+        "smoking": "no",
+        "user_id": 1
+    },
+    {
+        "cleanliness": "average",
+        "guest_frequency": "often",
+        "noise_level": "moderate",
+        "preference_id": 2,
+        "roommate_guest_preference": "ok",
+        "sleep_schedule": "night-owl",
+        "smoking": "no",
+        "user_id": 2
+    },
+    {
+        "cleanliness": "very-tidy",
+        "guest_frequency": "rarely",
+        "noise_level": "quiet",
+        "preference_id": 3,
+        "roommate_guest_preference": "limit",
+        "sleep_schedule": "early-bird",
+        "smoking": "no",
+        "user_id": 3
+    },
+    {
+        "cleanliness": "messy",
+        "guest_frequency": "often",
+        "noise_level": "lively",
+        "preference_id": 4,
+        "roommate_guest_preference": "discuss",
+        "sleep_schedule": "night-owl",
+        "smoking": "occasionally",
+        "user_id": 4
+    },
+    {
+        "cleanliness": "tidy",
+        "guest_frequency": "sometimes",
+        "noise_level": "moderate",
+        "preference_id": 5,
+        "roommate_guest_preference": "notice",
+        "sleep_schedule": "flexible",
+        "smoking": "no",
+        "user_id": 5
+    },
+    {
+        "cleanliness": "average",
+        "guest_frequency": "often",
+        "noise_level": "lively",
+        "preference_id": 6,
+        "roommate_guest_preference": "discuss",
+        "sleep_schedule": "night-owl",
+        "smoking": "yes",
+        "user_id": 6
+    },
+    {
+        "cleanliness": "very-tidy",
+        "guest_frequency": "rarely",
+        "noise_level": "quiet",
+        "preference_id": 7,
+        "roommate_guest_preference": "limit",
+        "sleep_schedule": "early-bird",
+        "smoking": "no",
+        "user_id": 7
+    },
+    {
+        "cleanliness": "tidy",
+        "guest_frequency": "sometimes",
+        "noise_level": "moderate",
+        "preference_id": 8,
+        "roommate_guest_preference": "notice",
+        "sleep_schedule": "flexible",
+        "smoking": "no",
+        "user_id": 8
+    },
+    {
+        "cleanliness": "messy",
+        "guest_frequency": "often",
+        "noise_level": "lively",
+        "preference_id": 9,
+        "roommate_guest_preference": "discuss",
+        "sleep_schedule": "night-owl",
+        "smoking": "yes",
+        "user_id": 9
+    },
+    {
+        "cleanliness": "average",
+        "guest_frequency": "sometimes",
+        "noise_level": "moderate",
+        "preference_id": 10,
+        "roommate_guest_preference": "ok",
+        "sleep_schedule": "flexible",
+        "smoking": "no",
+        "user_id": 10
+    }
+]

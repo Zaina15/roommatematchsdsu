@@ -1,0 +1,62 @@
+[
+    {
+        "has_pets": "no",
+        "pet_details": null,
+        "pet_id": 1,
+        "user_id": 1
+    },
+    {
+        "has_pets": "yes",
+        "pet_details": "Small dog",
+        "pet_id": 2,
+        "user_id": 2
+    },
+    {
+        "has_pets": "no",
+        "pet_details": null,
+        "pet_id": 3,
+        "user_id": 3
+    },
+    {
+        "has_pets": "yes",
+        "pet_details": "Two cats",
+        "pet_id": 4,
+        "user_id": 4
+    },
+    {
+        "has_pets": "allergic",
+        "pet_details": null,
+        "pet_id": 5,
+        "user_id": 5
+    },
+    {
+        "has_pets": "no",
+        "pet_details": null,
+        "pet_id": 6,
+        "user_id": 6
+    },
+    {
+        "has_pets": "yes",
+        "pet_details": "Bird",
+        "pet_id": 7,
+        "user_id": 7
+    },
+    {
+        "has_pets": "no",
+        "pet_details": null,
+        "pet_id": 8,
+        "user_id": 8
+    },
+    {
+        "has_pets": "allergic",
+        "pet_details": null,
+        "pet_id": 9,
+        "user_id": 9
+    },
+    {
+        "has_pets": "yes",
+        "pet_details": "Fish tank",
+        "pet_id": 10,
+        "user_id": 10
+    }
+]

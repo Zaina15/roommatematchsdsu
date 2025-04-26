@@ -1,0 +1,42 @@
+[
+    {
+        "interest_id": 1,
+        "interest_name": "hiking"
+    },
+    {
+        "interest_id": 2,
+        "interest_name": "cooking"
+    },
+    {
+        "interest_id": 3,
+        "interest_name": "reading"
+    },
+    {
+        "interest_id": 4,
+        "interest_name": "traveling"
+    },
+    {
+        "interest_id": 5,
+        "interest_name": "gaming"
+    },
+    {
+        "interest_id": 6,
+        "interest_name": "music"
+    },
+    {
+        "interest_id": 7,
+        "interest_name": "sports"
+    },
+    {
+        "interest_id": 8,
+        "interest_name": "art"
+    },
+    {
+        "interest_id": 9,
+        "interest_name": "photography"
+    },
+    {
+        "interest_id": 10,
+        "interest_name": "fitness"
+    }
+]

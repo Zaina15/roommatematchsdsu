@@ -1,0 +1,52 @@
+[
+    {
+        "additional_info": "Prefers a roommate who loves morning hikes.",
+        "preference_id": 1,
+        "user_id": 1
+    },
+    {
+        "additional_info": "Needs a quiet environment for studying.",
+        "preference_id": 2,
+        "user_id": 2
+    },
+    {
+        "additional_info": "Would love a roommate who enjoys weekend travel.",
+        "preference_id": 3,
+        "user_id": 3
+    },
+    {
+        "additional_info": "Prefers someone who is into gaming.",
+        "preference_id": 4,
+        "user_id": 4
+    },
+    {
+        "additional_info": "Would like to have art nights with roommate.",
+        "preference_id": 5,
+        "user_id": 5
+    },
+    {
+        "additional_info": "Interested in cooking meals together.",
+        "preference_id": 6,
+        "user_id": 6
+    },
+    {
+        "additional_info": "Wants a fitness buddy for gym sessions.",
+        "preference_id": 7,
+        "user_id": 7
+    },
+    {
+        "additional_info": "Prefers a roommate who enjoys music jam sessions.",
+        "preference_id": 8,
+        "user_id": 8
+    },
+    {
+        "additional_info": "Would like to explore San Diego with roommate.",
+        "preference_id": 9,
+        "user_id": 9
+    },
+    {
+        "additional_info": "Looking for someone who likes photography trips.",
+        "preference_id": 10,
+        "user_id": 10
+    }
+]

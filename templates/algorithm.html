@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Roommate Matches</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Your Top 5 Roommate Matches</h1>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Compatibility Score</th>
+        </tr>
+        {% for match in matches %}
+        <tr>
+            <td>{{ match.username }}</td>
+            <td>{{ match.full_name }}</td>
+            <td>{{ match.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

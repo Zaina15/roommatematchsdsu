@@ -1,0 +1,82 @@
+[
+    {
+        "academic_id": 1,
+        "academic_year": "freshman",
+        "graduation_year": 2028,
+        "major": "Computer Science",
+        "study_habits": "library",
+        "user_id": 1
+    },
+    {
+        "academic_id": 2,
+        "academic_year": "sophomore",
+        "graduation_year": 2027,
+        "major": "Business Administration",
+        "study_habits": "mix",
+        "user_id": 2
+    },
+    {
+        "academic_id": 3,
+        "academic_year": "freshman",
+        "graduation_year": 2028,
+        "major": "Psychology",
+        "study_habits": "in-room",
+        "user_id": 3
+    },
+    {
+        "academic_id": 4,
+        "academic_year": "junior",
+        "graduation_year": 2026,
+        "major": "Mechanical Engineering",
+        "study_habits": "library",
+        "user_id": 4
+    },
+    {
+        "academic_id": 5,
+        "academic_year": "senior",
+        "graduation_year": 2025,
+        "major": "Art",
+        "study_habits": "mix",
+        "user_id": 5
+    },
+    {
+        "academic_id": 6,
+        "academic_year": "graduate",
+        "graduation_year": 2025,
+        "major": "Data Science",
+        "study_habits": "library",
+        "user_id": 6
+    },
+    {
+        "academic_id": 7,
+        "academic_year": "sophomore",
+        "graduation_year": 2027,
+        "major": "Biology",
+        "study_habits": "in-room",
+        "user_id": 7
+    },
+    {
+        "academic_id": 8,
+        "academic_year": "junior",
+        "graduation_year": 2026,
+        "major": "Political Science",
+        "study_habits": "mix",
+        "user_id": 8
+    },
+    {
+        "academic_id": 9,
+        "academic_year": "freshman",
+        "graduation_year": 2028,
+        "major": "Marketing",
+        "study_habits": "library",
+        "user_id": 9
+    },
+    {
+        "academic_id": 10,
+        "academic_year": "freshman",
+        "graduation_year": 2028,
+        "major": "Environmental Studies",
+        "study_habits": "in-room",
+        "user_id": 10
+    }
+]

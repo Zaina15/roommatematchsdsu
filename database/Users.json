@@ -1,0 +1,122 @@
+[
+    {
+        "age": 20,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "alice1@sdsu.edu",
+        "full_name": "Alice Johnson",
+        "gender": "female",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword1",
+        "user_id": 1,
+        "username": "alice1"
+    },
+    {
+        "age": 22,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "bob2@sdsu.edu",
+        "full_name": "Bob Smith",
+        "gender": "male",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword2",
+        "user_id": 2,
+        "username": "bob2"
+    },
+    {
+        "age": 19,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "carol3@sdsu.edu",
+        "full_name": "Carol Martinez",
+        "gender": "female",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword3",
+        "user_id": 3,
+        "username": "carol3"
+    },
+    {
+        "age": 21,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "dave4@sdsu.edu",
+        "full_name": "Dave Lee",
+        "gender": "male",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword4",
+        "user_id": 4,
+        "username": "dave4"
+    },
+    {
+        "age": 18,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "eve5@sdsu.edu",
+        "full_name": "Eve Adams",
+        "gender": "non-binary",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword5",
+        "user_id": 5,
+        "username": "eve5"
+    },
+    {
+        "age": 23,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "frank6@sdsu.edu",
+        "full_name": "Frank Zhao",
+        "gender": "male",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword6",
+        "user_id": 6,
+        "username": "frank6"
+    },
+    {
+        "age": 20,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "grace7@sdsu.edu",
+        "full_name": "Grace Kim",
+        "gender": "female",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword7",
+        "user_id": 7,
+        "username": "grace7"
+    },
+    {
+        "age": 24,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "hannah8@sdsu.edu",
+        "full_name": "Hannah Patel",
+        "gender": "female",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword8",
+        "user_id": 8,
+        "username": "hannah8"
+    },
+    {
+        "age": 21,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "ivan9@sdsu.edu",
+        "full_name": "Ivan Williams",
+        "gender": "male",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword9",
+        "user_id": 9,
+        "username": "ivan9"
+    },
+    {
+        "age": 19,
+        "created_at": "2025-04-26 20:43:33",
+        "email": "judy10@sdsu.edu",
+        "full_name": "Judy Nguyen",
+        "gender": "female",
+        "is_active": 1,
+        "last_login": null,
+        "password_hash": "hashedpassword10",
+        "user_id": 10,
+        "username": "judy10"
+    }
+]

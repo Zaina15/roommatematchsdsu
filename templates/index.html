@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Match Finder</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        form { margin: 20px 0; }
+        label { font-size: 18px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Find Your Top 5 Roommate Matches</h1>
+    <form method="POST">
+        <label for="user_id">Enter Your User ID:</label>
+        <input type="number" id="user_id" name="user_id" required min="1">
+        <button type="submit">Find Matches</button>
+    </form>
+</body>
+</html>
