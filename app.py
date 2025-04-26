@@ -1,6 +1,6 @@
 # app.py
 from flask import Flask
-from db import db, User
+from db import db
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///roomieconnect.db'
