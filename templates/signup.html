@@ -202,6 +202,12 @@
     .checkbox-option input {
       margin-right: 8px;
     }
+
+    .error-message {
+      color: #dc3545;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -233,12 +239,12 @@
   <!-- Section 1: Basic Information -->
   <div class="form-section active" id="section-1">
     <h2>Basic Information</h2>
-    <form id="signup-form">
+    <form id="basic-info-form">
       <input type="email" id="email" name="email" placeholder="SDSU Email (e.g., name.sdsu.edu)" required pattern=".+@sdsu\.edu$">
       <input type="password" id="password" name="password" placeholder="Password" required minlength="8">
-      <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+      <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
       <input type="text" id="username" name="username" placeholder="Username" required>
-      <input type="text" id="full-name" name="full-name" placeholder="Full Name" required>
+      <input type="text" id="full-name" name="full_name" placeholder="Full Name" required>
       <input type="number" id="age" name="age" placeholder="Age" min="17" max="99" required>
       <select id="gender" name="gender" required>
         <option value="" disabled selected>Select Gender</option>
@@ -259,7 +265,7 @@
   <!-- Section 2: Living Preferences -->
   <div class="form-section" id="section-2">
     <h2>Living Preferences</h2>
-    <form>
+    <form id="preferences-form">
       <h3>Cleanliness</h3>
       <div class="radio-group">
         <div class="radio-option">
@@ -283,15 +289,15 @@
       <h3>Noise Level</h3>
       <div class="radio-group">
         <div class="radio-option">
-          <input type="radio" id="noise-quiet" name="noise" value="quiet" required>
+          <input type="radio" id="noise-quiet" name="noise_level" value="quiet" required>
           <label for="noise-quiet">Quiet</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="noise-moderate" name="noise" value="moderate">
+          <input type="radio" id="noise-moderate" name="noise_level" value="moderate">
           <label for="noise-moderate">Moderate</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="noise-lively" name="noise" value="lively">
+          <input type="radio" id="noise-lively" name="noise_level" value="lively">
           <label for="noise-lively">Lively</label>
         </div>
       </div>
@@ -299,15 +305,15 @@
       <h3>Sleep Schedule</h3>
       <div class="radio-group">
         <div class="radio-option">
-          <input type="radio" id="sleep-early" name="sleep" value="early-bird" required>
+          <input type="radio" id="sleep-early" name="sleep_schedule" value="early-bird" required>
           <label for="sleep-early">Early Bird</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="sleep-late" name="sleep" value="night-owl">
+          <input type="radio" id="sleep-late" name="sleep_schedule" value="night-owl">
           <label for="sleep-late">Night Owl</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="sleep-flexible" name="sleep" value="flexible">
+          <input type="radio" id="sleep-flexible" name="sleep_schedule" value="flexible">
           <label for="sleep-flexible">Flexible</label>
         </div>
       </div>
@@ -315,58 +321,58 @@
       <h3>Do you smoke?</h3>
       <div class="radio-group">
         <div class="radio-option">
-          <input type="radio" id="smoke-yes" name="smoke" value="yes" required>
+          <input type="radio" id="smoke-yes" name="smoking" value="yes" required>
           <label for="smoke-yes">Yes</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="smoke-no" name="smoke" value="no">
+          <input type="radio" id="smoke-no" name="smoking" value="no">
           <label for="smoke-no">No</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="smoke-occasionally" name="smoke" value="occasionally">
+          <input type="radio" id="smoke-occasionally" name="smoking" value="occasionally">
           <label for="smoke-occasionally">Occasionally</label>
         </div>
       </div>
-      <!-- Within Section 2: Living Preferences, after the smoking section -->
-    <h3>Guest Policy</h3>
-    <div class="radio-group">
-    <div class="radio-option">
-        <input type="radio" id="guest-rarely" name="guest-policy" value="rarely" required>
-        <label for="guest-rarely">Rarely have guests</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="guest-sometimes" name="guest-policy" value="sometimes">
-        <label for="guest-sometimes">Sometimes have guests</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="guest-often" name="guest-policy" value="often">
-        <label for="guest-often">Often have guests</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="guest-overnight" name="guest-policy" value="overnight">
-        <label for="guest-overnight">Sometimes have overnight guests</label>
-    </div>
-    </div>
+      
+      <h3>Guest Policy</h3>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="guest-rarely" name="guest_frequency" value="rarely" required>
+          <label for="guest-rarely">Rarely have guests</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="guest-sometimes" name="guest_frequency" value="sometimes">
+          <label for="guest-sometimes">Sometimes have guests</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="guest-often" name="guest_frequency" value="often">
+          <label for="guest-often">Often have guests</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="guest-overnight" name="guest_frequency" value="overnight">
+          <label for="guest-overnight">Sometimes have overnight guests</label>
+        </div>
+      </div>
 
-    <h3>How do you feel about your roommate having guests?</h3>
-    <div class="radio-group">
-    <div class="radio-option">
-        <input type="radio" id="ok-guests" name="roommate-guests" value="ok" required>
-        <label for="ok-guests">Completely fine with it</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="notice-guests" name="roommate-guests" value="notice">
-        <label for="notice-guests">Prefer advance notice</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="limit-guests" name="roommate-guests" value="limit">
-        <label for="limit-guests">Prefer limited guests</label>
-    </div>
-    <div class="radio-option">
-        <input type="radio" id="discuss-guests" name="roommate-guests" value="discuss">
-        <label for="discuss-guests">Want to discuss first</label>
-    </div>
-    </div>
+      <h3>How do you feel about your roommate having guests?</h3>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="ok-guests" name="roommate_guest_preference" value="ok" required>
+          <label for="ok-guests">Completely fine with it</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="notice-guests" name="roommate_guest_preference" value="notice">
+          <label for="notice-guests">Prefer advance notice</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="limit-guests" name="roommate_guest_preference" value="limit">
+          <label for="limit-guests">Prefer limited guests</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="discuss-guests" name="roommate_guest_preference" value="discuss">
+          <label for="discuss-guests">Want to discuss first</label>
+        </div>
+      </div>
       
       <div class="form-footer">
         <button type="button" class="btn btn-secondary prev-btn">Back</button>
@@ -378,8 +384,8 @@
   <!-- Section 3: Academic Information -->
   <div class="form-section" id="section-3">
     <h2>Academic Information</h2>
-    <form>
-      <select id="year" name="year" required>
+    <form id="academic-form">
+      <select id="year" name="academic_year" required>
         <option value="" disabled selected>Select Academic Year</option>
         <option value="freshman">Freshman</option>
         <option value="sophomore">Sophomore</option>
@@ -393,21 +399,21 @@
       <h3>Typical Study Habits</h3>
       <div class="radio-group">
         <div class="radio-option">
-          <input type="radio" id="study-in-room" name="study" value="in-room" required>
+          <input type="radio" id="study-in-room" name="study_habits" value="in-room" required>
           <label for="study-in-room">Study in room</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="study-library" name="study" value="library">
+          <input type="radio" id="study-library" name="study_habits" value="library">
           <label for="study-library">Study at library</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="study-mix" name="study" value="mix">
+          <input type="radio" id="study-mix" name="study_habits" value="mix">
           <label for="study-mix">Mix of both</label>
         </div>
       </div>
       
       <h3>Expected Graduation Year</h3>
-      <input type="number" id="graduation-year" name="graduation-year" min="2023" max="2030" required>
+      <input type="number" id="graduation-year" name="graduation_year" min="2023" max="2030" required>
       
       <div class="form-footer">
         <button type="button" class="btn btn-secondary prev-btn">Back</button>
@@ -418,33 +424,32 @@
   
   <!-- Section 4: Additional Criteria -->
   <div class="form-section" id="section-4">
-    <form id="final-form" action="home.html" method="POST">
     <h2>Additional Criteria</h2>
-    <form>
+    <form id="additional-form" action="/signup" method="POST">
       <h3>Interests (Select all that apply)</h3>
       <div class="checkbox-group">
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-sports" name="interests" value="sports">
+          <input type="checkbox" id="interest-sports" name="interests" value="1">
           <label for="interest-sports">Sports</label>
         </div>
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-gaming" name="interests" value="gaming">
+          <input type="checkbox" id="interest-gaming" name="interests" value="2">
           <label for="interest-gaming">Gaming</label>
         </div>
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-music" name="interests" value="music">
+          <input type="checkbox" id="interest-music" name="interests" value="3">
           <label for="interest-music">Music</label>
         </div>
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-reading" name="interests" value="reading">
+          <input type="checkbox" id="interest-reading" name="interests" value="4">
           <label for="interest-reading">Reading</label>
         </div>
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-outdoors" name="interests" value="outdoors">
+          <input type="checkbox" id="interest-outdoors" name="interests" value="5">
           <label for="interest-outdoors">Outdoor Activities</label>
         </div>
         <div class="checkbox-option">
-          <input type="checkbox" id="interest-arts" name="interests" value="arts">
+          <input type="checkbox" id="interest-arts" name="interests" value="6">
           <label for="interest-arts">Arts & Crafts</label>
         </div>
       </div>
@@ -452,25 +457,28 @@
       <h3>Do you have any pets?</h3>
       <div class="radio-group">
         <div class="radio-option">
-          <input type="radio" id="pets-yes" name="pets" value="yes" required>
+          <input type="radio" id="pets-yes" name="has_pets" value="yes" required>
           <label for="pets-yes">Yes</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="pets-no" name="pets" value="no">
+          <input type="radio" id="pets-no" name="has_pets" value="no">
           <label for="pets-no">No</label>
         </div>
         <div class="radio-option">
-          <input type="radio" id="pets-allergic" name="pets" value="allergic">
+          <input type="radio" id="pets-allergic" name="has_pets" value="allergic">
           <label for="pets-allergic">Allergic</label>
         </div>
       </div>
       
+      <h3>Pet Details (if applicable)</h3>
+      <textarea id="pet-details" name="pet_details" rows="2" placeholder="Describe your pets..."></textarea>
+      
       <h3>Anything else you'd like to share?</h3>
-      <textarea id="additional-info" name="additional-info" rows="4" placeholder="Tell potential roommates about yourself..."></textarea>
+      <textarea id="additional-info" name="additional_info" rows="4" placeholder="Tell potential roommates about yourself..."></textarea>
       
       <div class="form-footer">
         <button type="button" class="btn btn-secondary prev-btn">Back</button>
-        <button type="submit" class="btn" a href="home.html">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </div>
     </form>
   </div>
@@ -505,6 +513,49 @@
         currentSection--;
         showSection(currentSection);
         updateProgressBar();
+      });
+    });
+    
+    // Form submission handler
+    document.getElementById('additional-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Collect all form data
+      const formData = new FormData();
+      
+      // Add data from each section
+      document.querySelectorAll('input, select, textarea').forEach(element => {
+        if (element.name && (element.checked || element.value)) {
+          if (element.type === 'checkbox') {
+            if (element.checked) {
+              formData.append(element.name, element.value);
+            }
+          } else {
+            formData.append(element.name, element.value);
+          }
+        }
+      });
+      
+      // Submit to server
+      fetch('/signup', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.redirected) {
+          window.location.href = response.url;
+        } else {
+          return response.json();
+        }
+      })
+      .then(data => {
+        if (data && data.error) {
+          alert(data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred during signup');
       });
     });
     
@@ -545,11 +596,11 @@
       let isValid = true;
       
       inputs.forEach(input => {
-        if (!input.value) {
+        if (!input.value && !(input.type === 'radio' && currentForm.querySelector(`input[name="${input.name}"]:checked`))) {
           input.style.borderColor = 'red';
           isValid = false;
         } else {
-          input.style.borderColor = '#ccc';
+          if (input.style) input.style.borderColor = '#ccc';
         }
       });
       
@@ -574,6 +625,5 @@
     }
   });
 </script>
-
 </body>
 </html>
