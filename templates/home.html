@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoomieConnect - Home</title>
+  <style>
+    :root {
+      --primary-color: #9d0000;
+      --secondary-color: #a30000;
+      --background-color: #f5f7fa;
+      --card-color: #ffffff;
+      --text-color: #333333;
+      --light-text: #555555;
+      --border-radius: 12px;
+      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 30px;
+    }
+    
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .logo span {
+      color: var(--text-color);
+    }
+    
+    .user-menu {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .menu-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      color: var(--text-color);
+    }
+    
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: var(--card-color);
+      min-width: 160px;
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      z-index: 1;
+      overflow: hidden;
+    }
+    
+    .menu-dropdown a {
+      color: var(--text-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+    
+    .menu-dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .user-menu:hover .menu-dropdown {
+      display: block;
+    }
+    
+    .main-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .main-title h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .main-title p {
+      font-size: 18px;
+      color: var(--light-text);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .matches-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .matches-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .matches-header h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+    
+    .preferences-button {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    .preferences-button:hover {
+      background-color: var(--secondary-color);
+    }
+    
+    .matches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    
+    .match-card {
+      background-color: var(--card-color);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s;
+    }
+    
+    .match-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .match-image {
+      height: 180px;
+      background-color: #e0e0e0;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .match-details {
+      padding: 20px;
+    }
+    
+    .match-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .match-major {
+      color: var(--light-text);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .match-score {
+      display: flex;
+      align-items: center;
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    
+    .match-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .match-button {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .connect-button {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .connect-button:hover {
+      background-color: var(--secondary-color);
+    }
+    
+    .view-button {
+      background-color: #f1f1f1;
+      color: var(--text-color);
+    }
+    
+    .view-button:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .load-more {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .load-button {
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 12px 24px;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    
+    .load-button:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .matches-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+      
+      .main-title h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Roomie<span>Connect</span></div>
+      <div class="user-menu">
+        <button class="menu-button">
+          <span>My Profile</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="menu-dropdown">
+          <a href="#">My Profile</a>
+          <a href="#">Preferences</a>
+          <a href="#">Settings</a>
+          <a href="#">Log Out</a>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main-title">
+      <h1>Find Your Perfect Roommate</h1>
+      <p>Based on your preferences, here are your top matches at SDSU</p>
+    </div>
+    
+    <div class="matches-container">
+      <div class="matches-header">
+        <h2>Your Top Matches</h2>
+        <button class="preferences-button">Change Preferences</button>
+      </div>
+      
+      <div class="matches-grid">
+        <!-- Match Card 1 -->
+        <div class="match-card">
+          <div class="match-image" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+          <div class="match-details">
+            <div class="match-name">Person A</div>
+            <div class="match-major">Computer Science</div>
+            <div class="match-score">Match: 94%</div>
+            <div class="match-actions">
+              <button class="match-button view-button">View</button>
+              <button class="match-button connect-button">Connect</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Match Card 2 -->
+        <div class="match-card">
+          <div class="match-image" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+          <div class="match-details">
+            <div class="match-name">Person B</div>
+            <div class="match-major">Business Administration</div>
+            <div class="match-score">Match: 89%</div>
+            <div class="match-actions">
+              <button class="match-button view-button">View</button>
+              <button class="match-button connect-button">Connect</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Match Card 3 -->
+        <div class="match-card">
+          <div class="match-image" style="background-image: url('https://randomuser.me/api/portraits/men/67.jpg');"></div>
+          <div class="match-details">
+            <div class="match-name">Person C</div>
+            <div class="match-major">Psychology</div>
+            <div class="match-score">Match: 87%</div>
+            <div class="match-actions">
+              <button class="match-button view-button">View</button>
+              <button class="match-button connect-button">Connect</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Match Card 4 -->
+        <div class="match-card">
+          <div class="match-image" style="background-image: url('https://randomuser.me/api/portraits/women/28.jpg');"></div>
+          <div class="match-details">
+            <div class="match-name">Person D</div>
+            <div class="match-major">Biology</div>
+            <div class="match-score">Match: 85%</div>
+            <div class="match-actions">
+              <button class="match-button view-button">View</button>
+              <button class="match-button connect-button">Connect</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Match Card 5 -->
+        <div class="match-card">
+          <div class="match-image" style="background-image: url('https://randomuser.me/api/portraits/men/53.jpg');"></div>
+          <div class="match-details">
+            <div class="match-name">Person E</div>
+            <div class="match-major">Mechanical Engineering</div>
+            <div class="match-score">Match: 83%</div>
+            <div class="match-actions">
+              <button class="match-button view-button">View</button>
+              <button class="match-button connect-button">Connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="load-more">
+        <button class="load-button" onclick="loadMoreMatches()">Show More Matches</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function loadMoreMatches() {
+      // In a real implementation, this would fetch more matches from the server
+      alert("Loading more matches...");
+      // You would typically make an AJAX call here and update the DOM
+      // with the new matches received from the server
+    }
+    
+    // Add click handlers for menu items
+    document.querySelectorAll('.menu-dropdown a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert(`Navigating to ${this.textContent}`);
+        // In a real implementation, this would navigate to the selected page
+      });
+    });
+    
+    // Add click handler for preferences button
+    document.querySelector('.preferences-button').addEventListener('click', function() {
+      alert("Opening preferences editor...");
+      // This would open a preferences modal or navigate to preferences page
+    });
+  </script>
+</body>
+</html>
